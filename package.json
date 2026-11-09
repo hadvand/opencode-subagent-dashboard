@@ -1,0 +1,67 @@
+{
+  "name": "opencode-subagent-dashboard",
+  "version": "0.1.0",
+  "description": "OpenCode v2 TUI dashboard for tracking subagent progress, context usage, and recent activity in real time.",
+  "type": "module",
+  "license": "MIT",
+  "author": "hadvand (https://github.com/hadvand)",
+  "homepage": "https://github.com/hadvand/opencode-subagent-dashboard#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadvand/opencode-subagent-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hadvand/opencode-subagent-dashboard/issues"
+  },
+  "keywords": [
+    "opencode-plugin",
+    "opencode",
+    "opencode-tui",
+    "tui",
+    "subagent",
+    "subagents",
+    "dashboard",
+    "agents",
+    "orchestration",
+    "observability",
+    "context"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./tui": "./dist/tui.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepack": "npm run build",
+    "typecheck": "tsc -p tsconfig.json",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.2.6"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.8.1",
+    "@opentui/solid": ">=0.8.1",
+    "solid-js": ">=1.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-typescript": "^7.27.1",
+    "@opentui/core": "0.8.1",
+    "@opentui/solid": "0.8.1",
+    "@types/node": "^24.0.0",
+    "babel-preset-solid": "^1.9.16",
+    "esbuild": "^0.28.2",
+    "solid-js": "1.9.17",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
